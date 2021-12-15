@@ -38,77 +38,17 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-
-      <div class="logo me-auto">
-        <h1><a href="index.html">Scaffold</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-              <li><a class="nav-link scrollto" href="#team">Team</a></li>
-              <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <div class="header-social-links d-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
-          <div>
-            <h1>We design digital products that help grow businesses</h1>
-            <h2>We are team of talented designers making websites with Bootstrap</h2>
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-
-  </section><!-- End Hero -->
 
   <main id="main">
-
+    <section id = "title">
+      <div class="container">
+        <h1> Building a South Asian Language Transliteration Model</h1>
+        <h2>Abhishek Babu, Arkaprabha Bhattacharya</h2>
+      </div>
+    </section>
     <section id = "problem-statement">
-      <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
-        <div class="content pt-4 pt-lg-0">
+      <div class="container">
+        <div class="row">
           <h3>Problem Statement</h3>
           <p class="fst-italic">
             Transliteration involves taking words of some language and phonetically writing them in the script of another. 
@@ -122,8 +62,8 @@
             surrounding such:
           </p>
           <ul>
-            <li><i class="bi bi-check-circle"></i> If words or phrases are not properly transliterated, individuals may be misunderstood</li>
-            <li><i class="bi bi-check-circle"></i> If transliterated text is being typed, individuals may run into big grievances with autocorrect attempting to change their transliterated texts</li>
+            <li> If words or phrases are not properly transliterated, individuals may be misunderstood</li>
+            <li>If transliterated text is being typed, individuals may run into big grievances with autocorrect attempting to change their transliterated texts</li>
           </ul>
           <p>
             A possible means of remedy, as a result, is a transliteration model. Given a certain input language for transliterated text (say initially written in English), this model would be expected to 
@@ -145,74 +85,76 @@
       </div>
     </section>
     <section id = "related-works">
-      <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
-        <div class="content pt-4 pt-lg-0">
-          <h3>Related Works</h3>
-          <h4 class="fst-italic">
-            Sequence-to-sequence neural network models for transliteration
-          </h4>
-          <p>
-            Michaela Rosca and Thomas Bruel
-          </p>
-          <p>
-            This paper by researchers at Google looks specifically at models based on sequence to sequence neural network models. Specifically, 
-            Rosca and Bruel analyze the effectiveness of attention-based recurrent models, coming to the conclusion that recurrent neural networks 
-            achieve high accuracy in comparison to standard techniques for transliteration such as hidden markov models. The researchers specifically 
-            worked with GRU and LSTM models, both uni and bidirectional, and tested three different transliteration flows: Arabic to English, English to Japanese, 
-            and English to IPA (International Phonetic Alphabet).
-          </p>
-          <h4 class="fst-italic">
-            Arabic Machine Transliteration using an Attention-basedEncoder-decoder Model
-          </h4>
-          <p>
-            Mohamed Seghir Hadj Ameur, Farid Meziane, Ahmed Guessoum
-          </p>
-          <p>
-            This paper looks at machine transliteration between Arabic and English with an encoder/decoder model. A large part of our network architecture draws from 
-            this architecture due to the effectiveness it seems to have. The researchers look specifically at the transliteration of english words to arabic, due to the 
-            fact there are some arabic letters that do not map well to english, as well as for the sake of out-of-vocabulary handling in Machine Translation tasks. The authors
-            cite a series of previous techniques, for instance ones that use Convolutional Neural Networks, for machine transliteration, and then go to show that their 
-            encoder/decoder model with recurrent layers outperforms these. The authors look specifically at character and word error rate to judge their systems, i.e. the number 
-            of entire words and number of characters that are not correctly transliterated given an input phrase. We take on a similar approach, judging our transliteration model 
-            based on the character-level accuracy of our model (which we elaborate on in methods). Their model is interesting in that their encoding and decoding layers 
-            are each individual bidirectional GRU layers. 
-          </p>
-          <h4 class="fst-italic">
-            Automatic transliteration with LSTM
-          </h4>
-          <p>
-            Tigran Galstyan, Hrayr Harutyunyan and Hrant Khachatrian
-          </p>
-          <p>
-            This is a blog post that discusses the developoment of a transliteration model for Armenian, and uses some interesting techniques. 
-            These authors put a focus on data preprocessing. Given the limited availability of Armenian transliteration data, they make use of Armenian wikipedia
-            as a corpus. To parse and apply this corpus towards transliteration, the authors develop a set of romanization rules, i.e. a probabilistic 
-            distribution of what each armenian letter maps to in english. For their actual model, they choose to re-tool the char-rnn structure that exists, 
-            and based on 2 LSTMs. The authors choose to replace these LSTMs with bidirectional ones and add a shortcut connection for the learning of easy rules. 
-            The authors one hot encode all of their data and perform sequence alignment to the data in order to allow for better learning by the models. 
-            Their model achieves a very high level of accuracy, likely due to the preprocessing they do and the large corpus they use.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id = "methodology">
-      <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
-        <div class="content pt-4 pt-lg-0">
-          <h3>Methodology</h3>
-            <p> We first worked to analyze other models based in various languages (as noted in our literature review). It stood out that a large number 
-              of transliteration models are based on recurrent neural networks, mainly GRUs and LSTMs, and hence we chose to develop an initial architecture 
-              mirroring that of the paper by Ameur et. al, (which we go into depth about in the following section). We looked for robust initial datasets that suited 
-              our purposes, ideally for multiple south asian languages, and came upon the Dakshina dataset by google, which provides transliterated word data for 
-              multiple South Asian languages. Each data point in this data set includes a lexical transliteration, as well as a score representing the number of 
-              annotations that transliterate that word that way. For our training and testing data, we chose to use the transliterations that had the highest 
-              frequency score, only using multiple different transliterations of the same word if the highest frequency occured more than once.
-            </p>
-        </div>
-      </div>
+      <div class="container">
+        <div class="row">
+              <h3>Related Works</h3>
+              <h4 class="fst-italic">
+                Sequence-to-sequence neural network models for transliteration
+              </h4>
+              <p>
+                Michaela Rosca and Thomas Bruel
+              </p>
+              <p>
+                This paper by researchers at Google looks specifically at models based on sequence to sequence neural network models. Specifically, 
+                Rosca and Bruel analyze the effectiveness of attention-based recurrent models, coming to the conclusion that recurrent neural networks 
+                achieve high accuracy in comparison to standard techniques for transliteration such as hidden markov models. The researchers specifically 
+                worked with GRU and LSTM models, both uni and bidirectional, and tested three different transliteration flows: Arabic to English, English to Japanese, 
+                and English to IPA (International Phonetic Alphabet).
+              </p>
+              <h4 class="fst-italic">
+                Arabic Machine Transliteration using an Attention-basedEncoder-decoder Model
+              </h4>
+              <p>
+                Mohamed Seghir Hadj Ameur, Farid Meziane, Ahmed Guessoum
+              </p>
+              <p>
+                This paper looks at machine transliteration between Arabic and English with an encoder/decoder model. A large part of our network architecture draws from 
+                this architecture due to the effectiveness it seems to have. The researchers look specifically at the transliteration of english words to arabic, due to the 
+                fact there are some arabic letters that do not map well to english, as well as for the sake of out-of-vocabulary handling in Machine Translation tasks. The authors
+                cite a series of previous techniques, for instance ones that use Convolutional Neural Networks, for machine transliteration, and then go to show that their 
+                encoder/decoder model with recurrent layers outperforms these. The authors look specifically at character and word error rate to judge their systems, i.e. the number 
+                of entire words and number of characters that are not correctly transliterated given an input phrase. We take on a similar approach, judging our transliteration model 
+                based on the character-level accuracy of our model (which we elaborate on in methods). Their model is interesting in that their encoding and decoding layers 
+                are each individual bidirectional GRU layers. 
+              </p>
+              <h4 class="fst-italic">
+                Automatic transliteration with LSTM
+              </h4>
+              <p>
+                Tigran Galstyan, Hrayr Harutyunyan and Hrant Khachatrian
+              </p>
+              <p>
+                This is a blog post that discusses the developoment of a transliteration model for Armenian, and uses some interesting techniques. 
+                These authors put a focus on data preprocessing. Given the limited availability of Armenian transliteration data, they make use of Armenian wikipedia
+                as a corpus. To parse and apply this corpus towards transliteration, the authors develop a set of romanization rules, i.e. a probabilistic 
+                distribution of what each armenian letter maps to in english. For their actual model, they choose to re-tool the char-rnn structure that exists, 
+                and based on 2 LSTMs. The authors choose to replace these LSTMs with bidirectional ones and add a shortcut connection for the learning of easy rules. 
+                The authors one hot encode all of their data and perform sequence alignment to the data in order to allow for better learning by the models. 
+                Their model achieves a very high level of accuracy, likely due to the preprocessing they do and the large corpus they use.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id = "methodology">
+          <div class="container">
+            <div class="row">
+              <h3>Methodology</h3>
+                <p> We first worked to analyze other models based in various languages (as noted in our literature review). It stood out that a large number 
+                  of transliteration models are based on recurrent neural networks, mainly GRUs and LSTMs, and hence we chose to develop an initial architecture 
+                  mirroring that of the paper by Ameur et. al, (which we go into depth about in the following section). We looked for robust initial datasets that suited 
+                  our purposes, ideally for multiple south asian languages, and came upon the Dakshina dataset by google, which provides transliterated word data for 
+                  multiple South Asian languages. Each data point in this data set includes a lexical transliteration, as well as a score representing the number of 
+                  annotations that transliterate that word that way. For our training and testing data, we chose to use the transliterations that had the highest 
+                  frequency score, only using multiple different transliterations of the same word if the highest frequency occured more than once.
+                </p>
+            </div>
+          </div>
+            </div>
+          </div>
     </section>
     <section id = "experiments-and-eval">
-      <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
-        <div class="content pt-4 pt-lg-0">
+      <div class="container">
+        <div class="row">
           <h3> Model Architectures and Hyperparameters Used:</h3>
           We devised the following two architectures to test, based on what we saw in our review of literature.
           <img src="assets/img/GRU.png" class="img-fluid" alt="">
@@ -240,8 +182,8 @@
       
     </section>
     <section id = "conclusions">
-      <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
-        <div class="content pt-4 pt-lg-0">
+      <div class="container">
+        <div class="row">
           <h3> Conclusions</h3>
           Altogether, it is apparent that our GRU-based architecture seemed to work better than our LSTM-based architecture for all four languages. Further, we noticed that 
           the architectures generally performed better on the Tamil and Malayalam data. Further, trying to have the model infer our own 'new' data points, it seems the model does 
@@ -257,8 +199,8 @@
         </div>
       </div>
       <section id = "references">
-        <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
-          <div class="content pt-4 pt-lg-0">
+        <div class="container">
+          <div class="row">
             <h3> References</h3>
            <ul>
              <li> Rosca, Mihaela, and Thomas Breuel. "Sequence-to-sequence neural network models for transliteration." arXiv preprint arXiv:1610.09565 (2016).</li>
@@ -585,88 +527,7 @@
     <!-- End Cta Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <!-- <section id="testimonials" class="testimonials">
-      <div class="container">
 
-        <div class="section-title" data-aos="fade-up">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section> -->
     <!-- End Testimonials Section -->
 
     <!-- ======= Team Section ======= -->
@@ -1029,78 +890,7 @@
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>Scaffold</h3>
-              <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Scaffold</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+  <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
