@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Scaffold Bootstrap Template - Index</title>
+  <title>Machine Transliteration - Deep Learning Final Project</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -40,134 +42,192 @@
   <!-- ======= Header ======= -->
 
   <main id="main">
-    <section id = "title">
+    <section id="title">
       <div class="container">
-        <h1> Building a South Asian Language Transliteration Model</h1>
+        <h1> Machine Transliteration on South Asian Languages</h1>
         <h2>Abhishek Babu, Arkaprabha Bhattacharya</h2>
+        <h3>Project Repository: <a href="https://github.com/arkabhat/cse490g1-final-project" target="_blank">https://github.com/arkabhat/cse490g1-final-project</a></h3>
       </div>
     </section>
-    <section id = "problem-statement">
+    <section id="problem-statement">
       <div class="container">
+        <div class="row">
+          <h3>Project Video</h3>
+          <iframe width="400" height="500" src="https://www.youtube.com/embed/MzXLs_rDQHM" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <br/><br/><br/>
         <div class="row">
           <h3>Problem Statement</h3>
           <p class="fst-italic">
-            Transliteration involves taking words of some language and phonetically writing them in the script of another. 
+            Transliteration involves taking words of some language and phonetically writing them in the script of
+            another.
           </p>
           <p>
-            We see this phenomenon 
-            culminate especially when transforming proper nouns from one language to another, say from Chinese to English. Further, we also see 
-            transliteration as a tool for communication between individuals fluent in some language and individuals who are fluent in speaking and
-            comprehension of said language only. Individuals who are fluent in speaking and comprehension but not in the writing and reading of that language's 
-            script, have the option of phonetically transliterating their thoughts into another language to communicate. However, we identify the following problems 
+            We see this phenomenon
+            culminate especially when transforming proper nouns from one language to another, say from Chinese to
+            English. Further, we also see
+            transliteration as a tool for communication between individuals fluent in some language and individuals who
+            are fluent in speaking and
+            comprehension of said language only. Individuals who are fluent in speaking and comprehension but not in the
+            writing and reading of that language's
+            script, have the option of phonetically transliterating their thoughts into another language to communicate.
+            However, we identify the following problems
             surrounding such:
           </p>
           <ul>
             <li> If words or phrases are not properly transliterated, individuals may be misunderstood</li>
-            <li>If transliterated text is being typed, individuals may run into big grievances with autocorrect attempting to change their transliterated texts</li>
+            <li>If transliterated text is being typed, individuals may run into big grievances with autocorrect
+              attempting to change their transliterated texts</li>
           </ul>
           <p>
-            A possible means of remedy, as a result, is a transliteration model. Given a certain input language for transliterated text (say initially written in English), this model would be expected to 
-            convert that text into the native script of the language an individual is trying to speak. A transliteration model can remedy the issues 
-            many language speakers face if integrated into larger applications, and hence we decided to focus on developing and better understanding how transliteration models 
-            work and more specifically, what implications we can draw regarding the relationships between similarities of languages based on them. 
+            A possible means of remedy, as a result, is a transliteration model. Given a certain input language for
+            transliterated text (say initially written in English), this model would be expected to
+            convert that text into the native script of the language an individual is trying to speak. A transliteration
+            model can remedy the issues
+            many language speakers face if integrated into larger applications, and hence we decided to focus on
+            developing and better understanding how transliteration models
+            work and more specifically, what implications we can draw regarding the relationships between similarities
+            of languages based on them.
           </p>
           <p>
-            In our review of literature, we identified a relatively small body of work overall that looks at machine transliteration. Many of the models developed (see related works 
-            for additional information) address transliteration between English and languages across Asia and Europe. However, we have noticed a relatively small number of these 
-            academic works looking at the proliferation and relationship of South Asian languages and the implications of transliteration for them. Consequently, 
-            we devise the following thesis that we attempt to explore in this project: 
+            In our review of literature, we identified a relatively small body of work overall that looks at machine
+            transliteration. Many of the models developed (see related works
+            for additional information) address transliteration between English and languages across Asia and Europe.
+            However, we have noticed a relatively small number of these
+            academic works looking at the proliferation and relationship of South Asian languages and the implications
+            of transliteration for them. Consequently,
+            we devise the following thesis that we attempt to explore in this project:
           </p>
           <h4 class="fst-italic">
-            Due to the inherent similarities in South Asian languages, we set out to create a transliteration model between English and a set of these South Asian languages,
-            ultimately hoping to better understand the nuances of transliteration and how to improve these models in the future to potentially be integrated in products. 
+            Due to the inherent similarities in South Asian languages, we set out to create a transliteration model
+            between English and a set of these South Asian languages,
+            ultimately hoping to better understand the nuances of transliteration and how to improve these models in the
+            future to potentially be integrated in products.
           </h4>
         </div>
       </div>
     </section>
-    <section id = "related-works">
+    <section id="related-works">
       <div class="container">
         <div class="row">
-              <h3>Related Works</h3>
-              <h4 class="fst-italic">
-                Sequence-to-sequence neural network models for transliteration
-              </h4>
-              <p>
-                Michaela Rosca and Thomas Bruel
-              </p>
-              <p>
-                This paper by researchers at Google looks specifically at models based on sequence to sequence neural network models. Specifically, 
-                Rosca and Bruel analyze the effectiveness of attention-based recurrent models, coming to the conclusion that recurrent neural networks 
-                achieve high accuracy in comparison to standard techniques for transliteration such as hidden markov models. The researchers specifically 
-                worked with GRU and LSTM models, both uni and bidirectional, and tested three different transliteration flows: Arabic to English, English to Japanese, 
-                and English to IPA (International Phonetic Alphabet).
-              </p>
-              <h4 class="fst-italic">
-                Arabic Machine Transliteration using an Attention-basedEncoder-decoder Model
-              </h4>
-              <p>
-                Mohamed Seghir Hadj Ameur, Farid Meziane, Ahmed Guessoum
-              </p>
-              <p>
-                This paper looks at machine transliteration between Arabic and English with an encoder/decoder model. A large part of our network architecture draws from 
-                this architecture due to the effectiveness it seems to have. The researchers look specifically at the transliteration of english words to arabic, due to the 
-                fact there are some arabic letters that do not map well to english, as well as for the sake of out-of-vocabulary handling in Machine Translation tasks. The authors
-                cite a series of previous techniques, for instance ones that use Convolutional Neural Networks, for machine transliteration, and then go to show that their 
-                encoder/decoder model with recurrent layers outperforms these. The authors look specifically at character and word error rate to judge their systems, i.e. the number 
-                of entire words and number of characters that are not correctly transliterated given an input phrase. We take on a similar approach, judging our transliteration model 
-                based on the character-level accuracy of our model (which we elaborate on in methods). Their model is interesting in that their encoding and decoding layers 
-                are each individual bidirectional GRU layers. 
-              </p>
-              <h4 class="fst-italic">
-                Automatic transliteration with LSTM
-              </h4>
-              <p>
-                Tigran Galstyan, Hrayr Harutyunyan and Hrant Khachatrian
-              </p>
-              <p>
-                This is a blog post that discusses the developoment of a transliteration model for Armenian, and uses some interesting techniques. 
-                These authors put a focus on data preprocessing. Given the limited availability of Armenian transliteration data, they make use of Armenian wikipedia
-                as a corpus. To parse and apply this corpus towards transliteration, the authors develop a set of romanization rules, i.e. a probabilistic 
-                distribution of what each armenian letter maps to in english. For their actual model, they choose to re-tool the char-rnn structure that exists, 
-                and based on 2 LSTMs. The authors choose to replace these LSTMs with bidirectional ones and add a shortcut connection for the learning of easy rules. 
-                The authors one hot encode all of their data and perform sequence alignment to the data in order to allow for better learning by the models. 
-                Their model achieves a very high level of accuracy, likely due to the preprocessing they do and the large corpus they use.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section id = "methodology">
-          <div class="container">
-            <div class="row">
-              <h3>Methodology</h3>
-                <p> We first worked to analyze other models based in various languages (as noted in our literature review). It stood out that a large number 
-                  of transliteration models are based on recurrent neural networks, mainly GRUs and LSTMs, and hence we chose to develop an initial architecture 
-                  mirroring that of the paper by Ameur et. al, (which we go into depth about in the following section). We looked for robust initial datasets that suited 
-                  our purposes, ideally for multiple south asian languages, and came upon the Dakshina dataset by google, which provides transliterated word data for 
-                  multiple South Asian languages. Each data point in this data set includes a lexical transliteration, as well as a score representing the number of 
-                  annotations that transliterate that word that way. For our training and testing data, we chose to use the transliterations that had the highest 
-                  frequency score, only using multiple different transliterations of the same word if the highest frequency occured more than once.
-                </p>
-            </div>
-          </div>
-            </div>
-          </div>
+          <h3>Related Works</h3>
+          <h4 class="fst-italic">
+            Sequence-to-sequence neural network models for transliteration
+          </h4>
+          <p>
+            Michaela Rosca and Thomas Bruel
+          </p>
+          <p>
+            This paper by researchers at Google looks specifically at models based on sequence to sequence neural
+            network models. Specifically,
+            Rosca and Bruel analyze the effectiveness of attention-based recurrent models, coming to the conclusion that
+            recurrent neural networks
+            achieve high accuracy in comparison to standard techniques for transliteration such as hidden markov models.
+            The researchers specifically
+            worked with GRU and LSTM models, both uni and bidirectional, and tested three different transliteration
+            flows: Arabic to English, English to Japanese,
+            and English to IPA (International Phonetic Alphabet).
+          </p>
+          <h4 class="fst-italic">
+            Arabic Machine Transliteration using an Attention-basedEncoder-decoder Model
+          </h4>
+          <p>
+            Mohamed Seghir Hadj Ameur, Farid Meziane, Ahmed Guessoum
+          </p>
+          <p>
+            This paper looks at machine transliteration between Arabic and English with an encoder/decoder model. A
+            large part of our network architecture draws from
+            this architecture due to the effectiveness it seems to have. The researchers look specifically at the
+            transliteration of english words to arabic, due to the
+            fact there are some arabic letters that do not map well to english, as well as for the sake of
+            out-of-vocabulary handling in Machine Translation tasks. The authors
+            cite a series of previous techniques, for instance ones that use Convolutional Neural Networks, for machine
+            transliteration, and then go to show that their
+            encoder/decoder model with recurrent layers outperforms these. The authors look specifically at character
+            and word error rate to judge their systems, i.e. the number
+            of entire words and number of characters that are not correctly transliterated given an input phrase. We
+            take on a similar approach, judging our transliteration model
+            based on the character-level accuracy of our model (which we elaborate on in methods). Their model is
+            interesting in that their encoding and decoding layers
+            are each individual bidirectional GRU layers.
+          </p>
+          <h4 class="fst-italic">
+            Automatic transliteration with LSTM
+          </h4>
+          <p>
+            Tigran Galstyan, Hrayr Harutyunyan and Hrant Khachatrian
+          </p>
+          <p>
+            This is a blog post that discusses the developoment of a transliteration model for Armenian, and uses some
+            interesting techniques.
+            These authors put a focus on data preprocessing. Given the limited availability of Armenian transliteration
+            data, they make use of Armenian wikipedia
+            as a corpus. To parse and apply this corpus towards transliteration, the authors develop a set of
+            romanization rules, i.e. a probabilistic
+            distribution of what each armenian letter maps to in english. For their actual model, they choose to re-tool
+            the char-rnn structure that exists,
+            and based on 2 LSTMs. The authors choose to replace these LSTMs with bidirectional ones and add a shortcut
+            connection for the learning of easy rules.
+            The authors one hot encode all of their data and perform sequence alignment to the data in order to allow
+            for better learning by the models.
+            Their model achieves a very high level of accuracy, likely due to the preprocessing they do and the large
+            corpus they use.
+          </p>
+        </div>
+      </div>
     </section>
-    <section id = "experiments-and-eval">
+    <section id="methodology">
       <div class="container">
         <div class="row">
-          <h3> Model Architectures and Hyperparameters Used:</h3>
-          We devised the following two architectures to test, based on what we saw in our review of literature.
+          <h3>Methodology</h3>
+          <p> We first worked to analyze other models based in various languages (as noted in our literature review). It
+            stood out that a large number
+            of transliteration models are based on recurrent neural networks, mainly GRUs and LSTMs, and hence we chose
+            to develop an initial architecture
+            mirroring that of the paper by Ameur et. al, (which we go into depth about in the following section). We
+            looked for robust initial datasets that suited
+            our purposes, ideally for multiple south asian languages, and came upon the Dakshina dataset by google,
+            which provides transliterated word data for
+            multiple South Asian languages. Each data point in this data set includes a lexical transliteration, as well
+            as a score representing the number of
+            annotations that transliterate that word that way. For our training and testing data, we chose to use the
+            transliterations that had the highest
+            frequency score, only using multiple different transliterations of the same word if the highest frequency
+            occured more than once.
+          </p>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+    <section id="experiments-and-eval">
+      <div class="container">
+        <div class="row">
+          <h3>Model Architectures and Hyperparameters Used:</h3>
+          &nbsp;&nbsp;&nbsp;We devised the following two architectures to test, based on what we saw in our review of literature.
           <img src="assets/img/GRU.png" class="img-fluid" alt="">
           <img src="assets/img/LSTM.png" class="img-fluid" alt="">
-          Our first encoding layer mapped from the input language vocabulary size to 128. The middle fully connected layer mapped from 128 to 128 features. The final 
-          decoder layer mapped from 128 to 128, before being taken down to the output feature space by the final fully connected layer. We chose to include this 
-          intermediate encoding layer based on our hypothesis that it would help our model deal with different intricacies between languages better, creating a model architecture 
-          that is well suited for use across similar languages. Further, we processed our data by max-length padding them to the length of the largest input and output data points. This middle layer 
-          also serves to help the model better understand the beginning and ending of words as we transform the encodings of our input language and work to decode the transliteration of them. 
-          We trained and tested with a learning rate of 0.005 and a weight decay of 0.000005 for 20 epochs and used cross-entropy loss for training. 
+          Our first encoding layer mapped from the input language vocabulary size to 128. The middle fully connected
+          layer mapped from 128 to 128 features. The final
+          decoder layer mapped from 128 to 128, before being taken down to the output feature space by the final fully
+          connected layer. We chose to include this
+          intermediate encoding layer based on our hypothesis that it would help our model deal with different
+          intricacies between languages better, creating a model architecture
+          that is well suited for use across similar languages. Further, we processed our data by max-length padding
+          them to the length of the largest input and output data points. This middle layer
+          also serves to help the model better understand the beginning and ending of words as we transform the
+          encodings of our input language and work to decode the transliteration of them.
+          We trained and tested with a learning rate of 0.005 and a weight decay of 0.000005 for 20 epochs and used
+          cross-entropy loss for training.
+          <br/>
           <h3> Experiments Run</h3>
-          We test both of these models across four languages: 
-          Bengali, Hindi, Tamil, and Malayalam. We choose these languages specifically due to the inherent similarities in phonetic and lexical structure between Bengali and Hindi as well as Tamil and Malayalam.
+          We test both of these models across four languages:
+          Bengali, Hindi, Tamil, and Malayalam. We choose these languages specifically due to the inherent similarities
+          in phonetic and lexical structure between Bengali and Hindi as well as Tamil and Malayalam.
+          <br/>
           <h3> Evaluation and Results</h3>
           The following are the results of our experiments.
           <img src="assets/img/tamil_results.png" class="img-fluid" alt="">
@@ -178,47 +238,61 @@
         </div>
       </div>
     </section>
-    <section id = "demo">
-      <div class = "container">
-        <div class = "row">
+    <section id="demo">
+      <div class="container">
+        <div class="row">
           <h3> Demo</h3>
-          To access instructions to our demo of the Tamil model, visit the following link: 
-          <a href="https://github.com/arkabhat/cse490g1-final-project/blob/main/README.md">
+          &nbsp;&nbsp; To access instructions to our demo of the Tamil model, visit the following link:
+          <a href="https://github.com/arkabhat/cse490g1-final-project/blob/main/README.md" target="_blank">
             https://github.com/arkabhat/cse490g1-final-project/blob/main/README.md
           </a>
         </div>
       </div>
     </section>
-    <section id = "conclusions">
+    <section id="conclusions">
       <div class="container">
         <div class="row">
           <h3> Conclusions</h3>
-          Altogether, it is apparent that our GRU-based architecture seemed to work better than our LSTM-based architecture for all four languages. Further, we noticed that 
-          the architectures generally performed better on the Tamil and Malayalam data. Further, trying to have the model infer our own 'new' data points, it seems the model does 
-          a better job picking up phonetic nuances of Tamil and Malayalam in comparison to Hindi and Bengali. This is a curious effect, that could be attributed to a number of things 
-          including the size of training data and our network itself. Further, we wonder if it could be the case that Hindi and Bengali, coming from different linguistic roots than Tamil and 
-          Malayalam, include more rules-based orthography and linguistic structure in comparison to Tamil and Malayalam, making a model with data preprocessing similar to the one we observed for the Armenian 
-          data more suitable for them. Tamil and Malaylam may be based on more phonetic connections, or may just have more straightforward mappings to English. Despite this, we identify that 
-          these types of architectures are well-suited for South Asian languages. Further, we are curious about how this architecture would perform when transliterating between 
-          South Asian languages, with our hypothesis being that the accuracy would be much higher due to the similarities between some of these languages. Further, we would love to take a deeper dive 
-          into how such a model could be further augmented to be a general transliteration model, where just a few epochs of training on another language mapping could make it an acceptable 
-          model for transliterating in that language. We think that this extension could have great impacts and implications for integration into keyboards and autocorrection, as well as for larger machine 
-          translation networks that need a mechanism for dealing with words not in their vocabularies. 
+          &nbsp;&nbsp;Altogether, it is apparent that our GRU-based architecture seemed to work better than our LSTM-based
+          architecture for all four languages. Further, we noticed that
+          the architectures generally performed better on the Tamil and Malayalam data. Further, trying to have the
+          model infer our own 'new' data points, it seems the model does
+          a better job picking up phonetic nuances of Tamil and Malayalam in comparison to Hindi and Bengali. This is a
+          curious effect, that could be attributed to a number of things
+          including the size of training data and our network itself. Further, we wonder if it could be the case that
+          Hindi and Bengali, coming from different linguistic roots than Tamil and
+          Malayalam, include more rules-based orthography and linguistic structure in comparison to Tamil and Malayalam,
+          making a model with data preprocessing similar to the one we observed for the Armenian
+          data more suitable for them. Tamil and Malaylam may be based on more phonetic connections, or may just have
+          more straightforward mappings to English. Despite this, we identify that
+          these types of architectures are well-suited for South Asian languages. Further, we are curious about how this
+          architecture would perform when transliterating between
+          South Asian languages, with our hypothesis being that the accuracy would be much higher due to the
+          similarities between some of these languages. Further, we would love to take a deeper dive
+          into how such a model could be further augmented to be a general transliteration model, where just a few
+          epochs of training on another language mapping could make it an acceptable
+          model for transliterating in that language. We think that this extension could have great impacts and
+          implications for integration into keyboards and autocorrection, as well as for larger machine
+          translation networks that need a mechanism for dealing with words not in their vocabularies.
         </div>
       </div>
-      </section>
-      <section id = "references">
-        <div class="container">
-          <div class="row">
-            <h3> References</h3>
-           <ul>
-             <li> Rosca, Mihaela, and Thomas Breuel. "Sequence-to-sequence neural network models for transliteration." arXiv preprint arXiv:1610.09565 (2016).</li>
-             <li>Ameur, Mohamed Seghir Hadj, Farid Meziane, and Ahmed Guessoum. "Arabic machine transliteration using an attention-based encoder-decoder model." Procedia Computer Science 117 (2017): 287-297.</li>
-             <li>http://yerevann.github.io/2016/09/09/automatic-transliteration-with-lstm/</li>
-             <li>https://aclanthology.org/W18-2414.pdf</li>
-            </ul>
-          </div>
+    </section>
+    <section id="references">
+      <div class="container">
+        <div class="row">
+          <h3> References</h3>
+          <ul>
+            <li>Rosca, Mihaela, and Thomas Breuel. "Sequence-to-sequence neural network models for transliteration."
+              arXiv preprint arXiv:1610.09565 (2016).</li>
+            <li>Ameur, Mohamed Seghir Hadj, Farid Meziane, and Ahmed Guessoum. "Arabic machine transliteration using an
+              attention-based encoder-decoder model." Procedia Computer Science 117 (2017): 287-297.</li>
+            <li><a
+                href="http://yerevann.github.io/2016/09/09/automatic-transliteration-with-lstm/" target="_blank">http://yerevann.github.io/2016/09/09/automatic-transliteration-with-lstm/</a>
+            </li>
+            <li><a href="https://aclanthology.org/W18-2414.pdf" target="_blank">https://aclanthology.org/W18-2414.pdf</a></li>
+          </ul>
         </div>
+      </div>
     </section>
 
     <!-- ======= About Section ======= -->
@@ -901,7 +975,8 @@
   <!-- ======= Footer ======= -->
   <!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
