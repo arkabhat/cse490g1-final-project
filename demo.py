@@ -95,7 +95,7 @@ def generate_transliteration(word, model, en_voc2ind, lang_ind2voc, seq_len):
     en_tokens = tokenize_data(word, en_voc2ind)
     en_data = torch.LongTensor(pad_data(en_tokens, seq_len))
     
-    for c in torch.LongTensor(en_data):
+    for c in en_data:
         x, hidden = model.inference(c, hidden)
         transliteration.append(torch.argmax(x))
     
